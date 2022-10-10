@@ -17,6 +17,7 @@
                         <MenuItem mnemonicParsing="false" text="level" />
                         <MenuItem fx:id="displaySoalklik" mnemonicParsing="false" onAction="#displaySoalklik" text="soal" />
                         <MenuItem fx:id="displayScoreKlik" mnemonicParsing="false" onAction="#displayScoreKlik" text="score" />
+                        <MenuItem fx:id="displaySaveKlik" mnemonicParsing="false" onAction="#displaySaveKlik" text="save" />
                         <MenuItem fx:id="displayTerjawabKlik" mnemonicParsing="false" onAction="#displayTerjawabKlik" text="terjawab" />
                     </items>
                   </Menu>

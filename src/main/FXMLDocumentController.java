@@ -25,6 +25,7 @@ public class FXMLDocumentController implements Initializable {
     public static DBSoal dtsoal = new DBSoal();
     public static DBTerjawab dtterjawab = new DBTerjawab();
     public static DBScore dtscore = new DBScore();
+    public static DBSave dtsave = new DBSave();
     private Label label;
     @FXML
     private MenuItem displayUserKlik;
@@ -36,6 +37,8 @@ public class FXMLDocumentController implements Initializable {
     private MenuItem displayTerjawabKlik;
     @FXML
     private MenuItem displayScoreKlik;
+    @FXML
+    private MenuItem displaySaveKlik;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -115,6 +118,20 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void displayScoreKlik(ActionEvent event) {
         try{  FXMLLoader loader=new FXMLLoader(getClass().getResource("FXMLDisplayScore.fxml"));    
+        Parent root = (Parent)loader.load();
+        Scene scene = new Scene(root);
+        Stage stg=new Stage();
+        stg.initModality(Modality.APPLICATION_MODAL);
+        stg.setResizable(false);
+        stg.setIconified(false);
+        stg.setScene(scene);
+        stg.show();        
+        } catch (IOException e){   e.printStackTrace();   }
+    }
+
+    @FXML
+    private void displaySaveKlik(ActionEvent event) {
+        try{  FXMLLoader loader=new FXMLLoader(getClass().getResource("FXMLDisplaySave.fxml"));    
         Parent root = (Parent)loader.load();
         Scene scene = new Scene(root);
         Stage stg=new Stage();
