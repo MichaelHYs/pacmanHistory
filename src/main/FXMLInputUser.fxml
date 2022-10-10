@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.FXMLInputUserController">
+   <children>
+      <Label layoutX="81.0" layoutY="60.0" text="User ID" />
+      <Label layoutX="87.0" layoutY="107.0" text="Name" />
+      <TextField fx:id="txtUser" layoutX="151.0" layoutY="56.0" />
+      <TextField fx:id="txtName" layoutX="151.0" layoutY="103.0" />
+      <Button fx:id="btnsimpan" layoutX="75.0" layoutY="158.0" mnemonicParsing="false" onAction="#klikSimpan" text="Simpan" />
+      <Button fx:id="btnbatal" layoutX="175.0" layoutY="158.0" mnemonicParsing="false" onAction="#klikBatal" text="Batal" />
+      <Button fx:id="btnkeluar" layoutX="250.0" layoutY="158.0" mnemonicParsing="false" onAction="#klikKeluar" text="Keluar" />
+   </children>
+</AnchorPane>

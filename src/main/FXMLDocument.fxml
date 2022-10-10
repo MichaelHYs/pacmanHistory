@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="768" prefWidth="1024" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.FXMLDocumentController">
+   <children>
+      <MenuBar layoutY="1.0" prefHeight="26.0" prefWidth="1024.0">
+        <menus>
+            <Menu mnemonicParsing="false" text="Database">
+              <items>
+                  <Menu mnemonicParsing="false" text="Display">
+                    <items>
+                      <MenuItem fx:id="displayUserKlik" mnemonicParsing="false" onAction="#displayUserKlik" text="user" />
+                        <MenuItem mnemonicParsing="false" text="level" />
+                        <MenuItem fx:id="displaySoalklik" mnemonicParsing="false" onAction="#displaySoalklik" text="soal" />
+                        <MenuItem fx:id="displayScoreKlik" mnemonicParsing="false" onAction="#displayScoreKlik" text="score" />
+                        <MenuItem fx:id="displayTerjawabKlik" mnemonicParsing="false" onAction="#displayTerjawabKlik" text="terjawab" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Input">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#inputUserKlik" text="user" />
+                      <MenuItem mnemonicParsing="false" text="level" />
+                        <MenuItem fx:id="inputSoalklik" mnemonicParsing="false" onAction="#inputSoalklik" text="soal" />
+                        <MenuItem mnemonicParsing="false" text="high score" />
+                        <MenuItem mnemonicParsing="false" text="save" />
+                    </items>
+                  </Menu>
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Exit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="exit" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

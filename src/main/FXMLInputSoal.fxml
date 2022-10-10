@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.FXMLInputSoalController">
+   <children>
+      <Label layoutX="50.0" layoutY="38.0" prefHeight="18.0" prefWidth="50.0" text="ID soal" />
+      <Label layoutX="63.0" layoutY="74.0" prefHeight="18.0" prefWidth="34.0" text="Soal" />
+      <Label layoutX="25.0" layoutY="203.0" prefHeight="18.0" prefWidth="70.0" text="ID Jawaban" />
+      <Label layoutX="61.0" layoutY="248.0" prefHeight="18.0" prefWidth="34.0" text="Nilai" />
+      <TextArea fx:id="txtSoal" layoutX="133.0" layoutY="74.0" prefHeight="109.0" prefWidth="398.0" />
+      <Button fx:id="btnsimpan" layoutX="133.0" layoutY="296.0" mnemonicParsing="false" onAction="#kliksimpan" text="Simpan" />
+      <Button fx:id="btnbatal" layoutX="208.0" layoutY="296.0" mnemonicParsing="false" onAction="#klikbatal" text="Batal" />
+      <Button fx:id="btnkeluar" layoutX="274.0" layoutY="296.0" mnemonicParsing="false" onAction="#klikkeluar" text="Keluar" />
+      <Slider fx:id="sldNilai" layoutX="133.0" layoutY="250.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="0" prefHeight="14.0" prefWidth="150.0" showTickLabels="true" />
+      <Label fx:id="lblNilai" layoutX="296.0" layoutY="248.0" text="1" />
+      <Slider fx:id="sldIdJawab" layoutX="133.0" layoutY="205.0" majorTickUnit="1.0" max="50.0" min="1.0" minorTickCount="0" prefHeight="24.0" prefWidth="150.0" showTickMarks="true" />
+      <Slider fx:id="sldIdSoal" layoutX="133.0" layoutY="40.0" majorTickUnit="1.0" min="1.0" minorTickCount="0" showTickMarks="true" />
+      <Label fx:id="lblJawab" layoutX="296.0" layoutY="203.0" text="1" />
+      <Label fx:id="lblIdSoal" layoutX="296.0" layoutY="38.0" text="1" />
+   </children>
+</AnchorPane>

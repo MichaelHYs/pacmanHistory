@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.FXMLInputTerjawaControllerController">
+   <children>
+      <Slider fx:id="sldNilai" layoutX="141.0" layoutY="90.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="0" prefHeight="14.0" prefWidth="150.0" showTickLabels="true" />
+      <Label fx:id="lblNilai" layoutX="304.0" layoutY="88.0" text="1" />
+      <Label layoutX="79.0" layoutY="88.0" text="Nilai" />
+      <Label layoutX="73.0" layoutY="48.0" text="ID soal" />
+      <Button fx:id="btnsimpan" layoutX="141.0" layoutY="136.0" mnemonicParsing="false" onAction="#kliksimpan" text="Simpan" />
+      <Button fx:id="btnbatal" layoutX="216.0" layoutY="136.0" mnemonicParsing="false" onAction="#klikbatal" text="Batal" />
+      <Button fx:id="btnkeluar" layoutX="282.0" layoutY="136.0" mnemonicParsing="false" onAction="#klikkeluar" text="Keluar" />
+      <Slider fx:id="sldIdSoal" layoutX="143.0" layoutY="50.0" majorTickUnit="1.0" min="1.0" minorTickCount="0" showTickMarks="true" />
+      <Label fx:id="lblIdSoal" layoutX="306.0" layoutY="48.0" text="1" />
+   </children>
+</AnchorPane>
