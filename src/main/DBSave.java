@@ -14,6 +14,7 @@ import javafx.collections.ObservableList;
  * @author LENOVO
  */
 public class DBSave {
+
     private ModelSave dt = new ModelSave();
 
     public ModelSave getModelSave() {
@@ -23,6 +24,7 @@ public class DBSave {
     public void setModelSave(ModelSave s) {
         dt = s;
     }
+
     public ObservableList<ModelSave> Load() {
         try {
             ObservableList<ModelSave> tableData = FXCollections.observableArrayList();
@@ -30,11 +32,18 @@ public class DBSave {
             con.bukaKoneksi();
             con.statement = con.dbKoneksi.createStatement();
             ResultSet rs = con.statement.executeQuery(
-                    "Select save_id from save");
+                    "SELECT save_id, user.user_id, soal.soal_id, user.score\n"
+                    + "FROM ((save \n"
+                    + "INNER JOIN user ON save.user_id = user.user_id)\n"
+                    + "INNER JOIN soal ON save.soal_id = soal.soal_id);\n"
+                    + "");
             int i = 1;
             while (rs.next()) {
                 ModelSave d = new ModelSave();
                 d.setSave_id(rs.getInt("save_id"));
+                d.setUser_id(rs.getString("user_id"));
+                d.setSoal_id(rs.getInt("soal_id"));
+                d.setScore(rs.getInt("score"));
                 tableData.add(d);
                 i++;
             }
@@ -80,5 +89,5 @@ public class DBSave {
             return berhasil;
         }
     }
-    
+
 }

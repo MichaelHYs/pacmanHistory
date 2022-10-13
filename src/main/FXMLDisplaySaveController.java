@@ -53,6 +53,15 @@ public class FXMLDisplaySaveController implements Initializable {
             TableColumn col = new TableColumn("save_id");
             col.setCellValueFactory(new PropertyValueFactory<ModelUser, String>("save_id"));
             tbvsave.getColumns().addAll(col);
+            col = new TableColumn("user_id");
+            col.setCellValueFactory(new PropertyValueFactory<ModelUser, String>("user_id"));
+            tbvsave.getColumns().addAll(col);
+            col = new TableColumn("soal_id");
+            col.setCellValueFactory(new PropertyValueFactory<ModelUser, String>("soal_id"));
+            tbvsave.getColumns().addAll(col);
+            col = new TableColumn("score");
+            col.setCellValueFactory(new PropertyValueFactory<ModelUser, String>("score"));
+            tbvsave.getColumns().addAll(col);
             tbvsave.setItems(data);
         } else {
             Alert a = new Alert(Alert.AlertType.ERROR, "Data kosong", ButtonType.OK);
